@@ -1,0 +1,60 @@
+#dataCollection{
+    width: 250px;
+    margin: 50px auto;
+    font-family: 'Khmer OS Siemreap';
+    box-shadow: rgba(0,0,0,0.35)0px 5px 15px;
+    padding: 15px;
+}
+legend{
+    background-color: greenyellow;
+    color: black;
+}
+fieldset{
+    background-color: skyblue;
+}
+#pwd{
+    display: block;
+    position: relative;
+    width: 250px;
+    border: 1px solid blacks;
+    border-radius: 8px;
+}
+#txt{
+    display: block;
+    border-radius: 8px;
+    width: 250px;
+}
+#btn:hover{background-color: red;}
+#btn{
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+}
+#rst:hover{background-color: blue;}
+#rst{
+    background-color: red;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+}
+#smt{background-color: black;}
+#smt{
+    background-color: pink;
+    width: 50px;
+    color: white;
+    height: 30px;
+    border-radius: 8px;
+}
+#hMenu{
+    font-family: 'Khmer OS Muol';
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 100px;
+    
+}
+#pwd{
+    float: none;
+}

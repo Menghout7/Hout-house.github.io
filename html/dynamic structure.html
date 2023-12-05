@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Structure</title>
+    <style>
+        body{font-family: 'Khmer OS Muol Light';}
+        #ds{list-style: none; width: 112px;margin: 0 auto;}
+        li{border-radius: 16px; text-align: center;padding: 8px; margin-bottom: 2px;}
+        .green{background-color: greenyellow; color: black;}
+        .yellow{background-color: yellow; color: black;}
+        .red{background-color: red; color: white;}
+    </style>
+</head>
+<body>
+    <ul id="ds">
+        <li class="green">បៃតង</li>
+        <li class="yellow">លឿង</li>
+    </ul>
+    <script type="text/javascript">
+        var li=document.createElement("li")//បង្កើតធាតុ​liតាងដោយអថេរli
+        var content=document.createTextNode("ក្រហម");//បង្កើតខ្លឹមសារក្រហមដោយតាងដោយអថេរcontent
+        li.appendChild(content);//ថែមខ្លឹមសារចូលធាតុ
+        var ul=document.querySelector("#ds");//រើសធាតុមានid=dsហើយតាងអថេul
+        ul.appendChild(li)//ថែមធាតុចូលក្នុងweb page
+        var clas=document.createAttribute("class")//បង្កើតគុណលក្ខណះClassតាងដោយclas
+        clas.value="red";//កំណត់តម្លៃគុណលក្ខណះ
+        li=document.querySelector("li:nth-child(3)");//រើសយកកូនទី3
+        li.setAttributeNode(clas);//ថែមគុណលក្ខណះទៅអោយធាតុ
+        //document.querySelector("li:nth-child(1)").remove(); //រើសយលធាតុទី១ហើយលុបចោល
+        
+    </script>
+</body>
+</html>

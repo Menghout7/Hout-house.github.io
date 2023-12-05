@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <title>get Element</title>
+    <script>
+        var three=document.getElementById("three");
+        if(three!=null)
+            alert("Three");             
+        else
+            alert("Fair");
+        var tf=document.getElementsByClassName("tf");
+            alert(tf.length);
+        var p=document.getElementsByTagName("p");
+        if(p.length>0)
+            alert("Selceted!")
+        else
+            alert("Fair");
+    </script>
+</head>
+<body>
+    <p>one</p>
+    <p class="tf">Two</p>
+    <p id="three">Three</p>
+    <p class="tf">four</p>
+    <p>five</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic attribute</title>
+    <style>
+        div,#feature{width: 400px; height: 400px; margin: 0 auto; padding: 20px;}
+        div{margin: 0 auto;}
+        #feature{border: 1px solid black; border-radius: 8px;}
+        .hidden{width: 0; height: 0; float: right;}
+        #title{font-family: 'Khmer OS Muol Light'; background: greenyellow; display: block; text-align: center;width: 504px;margin: -10px 0 0 -2px;color: white;}
+    </style>
+<body>
+   <div>
+    <img class="hidden" src="../media/RUPP2.jpg" alt="">
+    <img class="hidden" src="../media/RUPP3.jpg" alt="">
+    <img class="hidden" src="../media/RUPP4.jpg" alt="">
+    <img class="hidden" src="../media/RUPP5.jpg" alt="">
+    <img id="feature" src="../media/RUPP1.jpg" alt="error">
+    <span id="title">អាគារA</span>
+   </div>
+   <script type="text/javascript">
+    var feature = document.getElementById("feature");
+    var i=0;
+    var title=document.getElementById("title");
+    var slides=[
+        ["../media/BuildingA.jpg","អាគារA"],
+        ["../media/CeremonyHall.jpg","សាលបុណ្យ"],
+        ["../media/IFL.jpg","វិទ្យាបរទេស"],
+        ["../media/CJCC.jpg","CJCC"],
+        ["../media/CKCC.jpg","CKCC"],
+    ]
+    var colors=[
+        ["GreenYellow","White"],
+        ["Yellow","Black"],
+        ["Orange","White"],
+        ["Red","Gold"],
+        ["Blue","White"],
+    ]
+    function silde(){
+        if(i==4)
+            i=-1;
+        feature.src=slides[++i][0]
+        title.textContent=slides[i][1]
+        title.style.backgroundColor=colors[i][0];
+        title.style.color=colors[i][1];
+        }
+    window.setInterval(silde,1000);
+
+   </script>
+</body>
+</html>

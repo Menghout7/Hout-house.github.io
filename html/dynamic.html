@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic content</title>
+    <style>
+        div{width: 910px; margin: auto;}
+        span{display: inline-block;width: 300px; height: 300px; border-radius: 80%; text-align: center; padding-top: 144px; font-size: 100px; border: 200px;}
+        #rnd1{background-color: greenyellow;}
+        #rnd2{background-color: yellow;}
+        #rnd3{background-color: red;}
+        input{width: 320px; padding: 10px; margin-top: 10px; border-radius: 5px; font-size: 25px;}
+        form{width: 645px; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <span id="rnd1">0-9</span>
+        <span id="rnd2">1-8</span>
+        <span id="rnd3">2-7</span>
+        <form>
+            <input type="button" name="btnStart" id="btnStart" value="ផ្ដើម">
+            <input type="button" name="btnStop" id="btnStop" value="បញ្ឈប់">
+        </form>
+       <!-- <span style="cursor:pointer ;">auto</span>-->
+    </div>
+    <script type="text/javascript">
+         /*document.write(Math.floor(Math.random()*8+1));
+       document.write(Math.floor(0.9));//បង្គត់ចុះ
+        document.write(Math.ceil(0.9));//បង្គត់ទ្បើង
+        document.write(Math.random());
+        document.write(Math.round(0.9));//បង្គត់ចុះ&ទ្បើង*/
+
+        var rnd1=document.getElementById("rnd1");
+        var rnd2=document.getElementById("rnd2");
+        var rnd3=document.getElementById("rnd3");
+        var btnStart=document.getElementById("btnStart");
+        var btnStop=document.getElementById("btnStop");
+        var intervalID=0;
+         function random(){
+        rnd1.textContent=Math.floor(Math.random()*10);
+        rnd2.textContent=Math.floor(Math.random()*8+1);
+        rnd3.textContent=Math.floor(Math.random()*6+2);
+         }
+        btnStart.onclick = function(){intervalID=window.setInterval(random,500);};
+        btnStop.onclick = function(){window.clearInterval(intervalID);};
+        
+    </script>
+</body>
+</html>

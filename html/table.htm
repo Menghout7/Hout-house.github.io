@@ -1,0 +1,99 @@
+<html>
+   <head>
+      <title>តារាង - table</title>
+      <link rel="stylesheet" href=".......">
+      <!-- table{border: 1px solid black;}
+         th{border: 1px dashed blue;}
+         td{border: 1px solid black;}
+         tr{border: 1px solid red;} -->
+      <style>
+         table,th,td{border: 1px solid black; border-collapse: collapse;}
+         table{width: 50%;text-align: center; margin:16px auto;}
+         tr:hover{background-color: orange;}
+         th:hover{background-color: yellowgreen;}
+      </style>
+   </head>
+   <body>
+      <marquee behavior="10px" direction="px">
+         <h1>Hello</h1>
+      </marquee> 
+      <div id="hMenu"><!-- horizontal menu ម៉ឺនុយផ្តេក-->
+         <a href="../index.htm">ទំព័រដើម</a>
+         <a href="text.htm">អត្ថបទ</a>
+         <a href="image.htm">រូបភាព</a>
+         <a href="list.htm">បញ្ជី</a>
+         <a id="current" href="#">តារាង</a>
+         <a href="media.htm">ពហុព័ត៌មាន</a>
+      </div id="dataCollection">
+      <form id="frm" action="atServer.php" method="get"></form>
+      <div>
+      <label for="txt">ប្រអប់អត្តបទ</label>
+      <input type="text" name="txt">
+      </div>
+      <!--ចំណាំ​អត្តសញ្ញាណសម្គាល់ធាតុមិនអាចស្ទួនកំណត់ដោយលក្ខណះid ឫ​ អាចស្ទួនកំណត់ដោយលក្ខណះ​ name-->
+   <fieldset>
+      </div id="dataCollection">
+         <form id="frm" action="atServer.php" method="get"></form>
+         <label for="txt">ប្រអប់ពាក្យសម្ងាត់</label>
+         <input type="password" id="pwd" name="pwd">
+         <!--ចំណាំ​អត្តសញ្ញាណសម្គាល់ធាតុមិនអាចស្ទួនកំណត់ដោយលក្ខណះid ឫ​ អាចស្ទួនកំណត់ដោយលក្ខណះ​ name-->
+      <fieldset>
+         <legend>ជម្រើសដែលអាចចជ្រើស​ មួយ ឫ ច្រើន</legend>
+         <div>
+            <input type="checkbox" id="chk1" name="chk1">
+            <label for="chk1">ជម្រើសទី១</label>
+         </div>
+         <div>
+            <input type="checkbox" id="chk2" name="chk2">
+            <label for="chk2">ជម្រើសទី២</label>
+         </div>
+         <div>
+            <input type="checkbox" id="chk3" name="chk3">
+            <label for="chk3">ជម្រើសទី៣</label>
+         </div>
+      </fieldset>
+      <fieldset>
+         <legend>ជម្រើសដែលអាចបានតែមួយគត់</legend>
+         <div>
+            <input type="radio" id="rdo1" name="rdo">
+            <label for="rdo">ជម្រើសទី១</label>
+         </div>
+         <div>
+            <input type="radio" id="rdo2" name="rdo">
+            <label for="rdo2">ជម្រើសទី២</label>
+         </div>
+          <div>
+            <input type="radio" id="rdo3" name="rdo">
+            <label for="rdo3">ជម្រើសទី៣</label>
+          </div>
+      </fieldset>
+      <div>
+         <label for="dd1">ប្រអប់ទម្លាក់ន័យអោយជ្រើសយកទិន្នន៍យតែមួយ</label><!--dd=dropdowlist-->
+         <select id="dd1">
+            <option>ជម្រើសទី១</option>
+            <option>ជម្រើសទី២</option>
+            <option>ជម្រើសទី៣</option>
+         </select>
+      </div>
+      <div>
+         <label for="lst">បញ្ញីរាយទិន្នន័យអាចជ្រើសយលទិន្នន័យមួយ​ ឫ ច្រើន</label>
+         <select id="lst" multiple="3">
+            <option>ជម្រើសទី១</option>
+            <option>ជម្រើសទី២</option>
+            <option>ជម្រើសទី៣</option>
+            <option>ជម្រើសទី៤</option>
+         </select>
+      </div>
+
+      <table>
+         <tr bgcolor="lightblue"><th>ល.រ</th><th>ឈ្មោះនិស្សិត</th><th>លេខទូរស័ព្ទ</th></tr>
+         <tr><td>១</td><td>ហង្ស វាសនាជេមស៍</td><td>០១0៣៤៥៦៧៨</td></tr>
+         <tr><td>២</td><td>ហេង សេដ្ឋសេវ័ន្ត</td><td>០១១៣៤៥៦៧៨</td></tr>
+         <tr><td>៣</td><td>សុខហេង សុខវាសនា</td><td>០១២៣៤៥៦៧៨</td></tr>
+         <tr><td>៤</td><td>លឹម សេងគឹមស៊្រុន</td><td>០១៥៣៤៥៦៧៨</td></tr>
+         <tr><td>៥</td><td>ស៊្រុន វឌ្ឍនាដាលាភ</td><td>០១៦៣៤៥៦៧៨</td></tr>
+         <tr><td>៦</td><td>គឹម ចាន់តារារាជ</td><td>០១៧៣៤៥៦៧៨</td></tr>
+         <tr bgcolor="lightskyblue"><td>៧</td><td>ឈៀក ឧត្តមបញ្ញា</td><td>០៩៧២៣៤៥៦៧៨</td></tr>
+      </table>
+   </body>
+</html>   
